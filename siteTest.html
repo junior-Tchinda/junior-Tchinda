@@ -1,0 +1,194 @@
+<!doctype.html>
+<html>
+	<head>
+		<meta name="viewport " content ="width=device-width, initial-scale =1.0">
+		<meta charset="utf-8">
+		<title> site de Junior </title>
+		<style>
+body
+{
+	background-image: url("a.jpg");
+}
+.container-fluid
+{
+	background-color: rgba(226, 108, 72, 0.9);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;	
+}
+.en_tete
+{
+	background-color: #fff;
+	vertical-align: top;
+	width: 100%;
+	height: 3em;
+	font-family: arial;
+}
+header img
+{
+	width: 1em;
+	height: 1em;
+	margin-top: 0.9em;
+	margin-left: 1em;
+}
+nav
+{
+	width: 90%;
+	display: inline-block;
+	text-align: right;
+}
+.nav_en_tete
+{
+	border: 1px none black;
+	text-decoration: none;
+	color: bleu;
+	margin: 1em 1%;
+}
+.nav_en_tete:hover
+{
+	color: red;
+}
+
+.intro
+{
+	width: 20em;
+	height: 15em;
+	font-family: arial;
+	color: #fff;
+	display: inline-block;
+	margin: 7em 15%;	
+}
+.formulaire
+{
+	display: inline-block;
+	width: 17em;
+	height: 18em;
+	background-color: #f3f3f3;
+	padding-top: 2em;
+}
+.sortie, .soumettre
+{
+	border: 1px solid #fff;
+	border-radius: 20px;
+	margin-left: 0em;
+	padding: 0.5em 1.5em;
+	text-decoration: none;
+	color: #fff;
+}
+.soumettre
+{
+	background-color: #f23d0b;
+	color: #fff;
+	width: 15em;
+}
+.saisir
+{
+	width: 15em;
+	height: 2em;
+}
+.sortie:hover, .soumettre:hover
+{
+	background-color: #fecbc7;
+}
+.saisir:hover, .saisir:focus
+{
+	background-color: aqua;
+}
+
+		</style>
+		<script>
+			function nbre_aleatoire(min, max)
+				{
+					var nbre = min + (max - min + 1)*Math.random();
+					return Math.floor(nbre);
+				}
+			function jeu()
+{
+var max = 100;
+var nbre_partie = 0;
+var score_max = 0;
+	do
+		{
+		var reponse = nbre_aleatoire(1, max)
+		var choix = prompt('\t\t JEU DE "PLUS OU MOINS" : ce jeu consiste a proposé des nombres jusqu\'à trouver le bon.\n \tsaisir un nombre de ton choix compris entre 1 et ' + max);
+		var i = 0;
+		while(1)
+			{	
+				i++;
+				if(choix == null)
+					{
+						alert("merci d'être passé");
+						return 0;
+					}
+				else if(isNaN(choix) || !choix)
+						choix = prompt("veuillez entrer un nombre");
+				else if (choix <= max && choix >= 1)
+					{
+						if(choix < reponse)
+							choix = prompt("réessayez en augmentant la valeur");
+						else if(choix > reponse)
+							choix = prompt("réessayez en diminuant la valeur");
+						else
+							{
+								alert("Félicitation vous avez trouvé :) \nVous avez effectué " + i + " essai(s) \nLe nombre correct étant " + reponse);
+								break;
+							}
+					}	
+				else
+					choix = prompt('le nombre saisi n\'est pas compris entre 1 et ' + max + ', veuillez reessayer !');
+			}
+			confirmation = confirm('voulez-vous rejouer ?');
+			max += 50;
+			nbre_partie++;
+			if(score_max > i || score_max == 0)
+				score_max = i;
+		}while(confirmation);
+		alert('vous avez joué ' +nbre_partie+ ' partie(s) et votre score maximal est de ' +score_max+ ' essai(s)');
+}
+		</script>
+	</head>
+	<body> 
+		<div class="container-fluid">
+			<div class="en_tete">
+				<header>
+					<img src="programmation_du_css\b.jpg" alt="2nd image" /> <b> Junior </b>
+					<nav>
+						<a href="" class="nav_en_tete"> nom </a>
+						<a href="" class="nav_en_tete"> services </a>
+						<a href="" class="nav_en_tete"> details </a>
+						<a href="" class="nav_en_tete"> frais </a>
+						<a href="" class="nav_en_tete"> projects </a>
+						<select class="nav_en_tete">
+							<option > <a href="file:///C:/Users/237%20COMPUTER%20VILLAGE/Desktop/apprentir1/test.html"> pages 1 </a> </option>							
+							<option > pages 2 </option>							
+							<option > pages 3 </option>
+						</select>
+						<a href="" class="nav_en_tete"> contacts </a>
+					</nav>
+				</header>
+			</div>
+			<center>	
+				<a href="#" onclick="jeu()" style="font-size: 3em; text-decoration: none; color: gold; font-style: italic;"> cliquez ici pour ouvrir le jeu 'PLUS OU MOINS' </a> 
+			</center>
+			<div class="intro">
+				<h1> BUSINESS SITE HTML TEMPLATE </h1>
+				<p> je vous presente ce site qui fait parti en tant que debute de mes sites lors de ma formation </p> <br />
+				<a href="" class="sortie"> sortie </a> 
+			</div>
+			<div class="formulaire">
+				<form method="post">
+					<center>
+				<p>	<input type="text" placeholder="nom" class="saisir" required > </p>
+				<p>	<input type="text" placeholder="prenom" class="saisir" required > </p>
+				<p>	<input type="number" placeholder="age" class="saisir" required > </p>  
+				<p>	<input type="address" placeholder="adresse" class="saisir" required > </p>
+				<p>	<input type="checkbox" id="clic" > <label for="clic"> Accepter les publicités </label> </p>
+				<p>	<a href="file:///C:/Users/237%20COMPUTER%20VILLAGE/Desktop/apprentir1/test.html"><input type="submit" class="soumettre" value="soumettre"></a> </p>
+					</center>
+				</form>	
+			</div>
+		</div>
+	</body>
+</html>
