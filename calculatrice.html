@@ -1,0 +1,289 @@
+<!doctype>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="programmation_du_css\style3.css">
+		<title> calculatrice </title>
+		<style>
+body
+{
+	background-color: #f6fffc;
+}
+header
+{
+	text-align: center;	
+}
+.color_header
+{
+	color: blue;
+}
+.ligne_double
+{
+	border: 2px double blue;
+	width: 99.8%;
+	height: 0%;
+}
+.big_box
+{
+	background-color: #fff;
+	border: 1px solid blue;
+	width: 100%;
+	box-shadow: 2px 2px 8px black;
+	margin-bottom: 3%;
+}
+#big_box2
+{
+	text-align: right;
+	font-size: 2em;
+	font-weight: bold;
+	width: 100%;
+	border: none;
+	height: 10%;
+}
+#big_box1
+{
+	width: 100%;
+	font-size: 1.2em;
+	color: green;
+	font-family: cursive;
+	border: none;
+}
+.ligne1_colonneA, .ligne2_colonneA, .ligne1_colonneB1, .ligne1_colonneB2, 
+.ligne2_colonneB1,.ligne2_colonneB2, .ligne3_colonneA, .ligne3_colonneB1,.ligne3_colonneB2, .ligne4_colonneA1, .ligne4_colonneA2, .ligne4_colonneB1,   #text
+{
+	display: inline-block;
+	border: 1px solid black;
+	margin: 1.2% 0.6%;
+	width: 15%;
+	height: 3.5%;
+	text-align: center;
+    padding: 0.8% 1.1%;
+	box-shadow: 2px 2px 8px black;
+	border-radius: 8px;
+	background-color: #fff;
+	text-decoration: none;
+}
+.ligne1_colonneB1, .ligne2_colonneB1, .ligne3_colonneB1, .ligne4_colonneB1
+{
+	background-color: aqua;
+	margin-left: 5.4%;
+}
+.ligne1_colonneB2
+{
+	background-color: red;
+}
+.ligne2_colonneB1, .ligne3_colonneB1
+{
+	background-color: #fff;
+}
+.ligne4_colonneB1
+{
+	background-color: yellow;
+	width: 34%;
+}
+.ligne4_colonneA1
+{
+	width: 34%;
+}
+#text
+{
+	margin: 1% 0.6%;
+	width: 65%;
+}
+.ligne1_colonneA:active, .ligne2_colonneA:active, .ligne1_colonneB1:active, .ligne1_colonneB2:active, .ligne2_colonneB1:active,.ligne2_colonneB2:active, .ligne3_colonneA:active, .ligne3_colonneB1:active, .ligne4_colonneA1:active, .ligne4_colonneA2:active, .ligne4_colonneB1:active,.ligne3_4_colonneB2:active,#text:active
+{
+	background-color: gray;
+	border: 2px blue solid;
+}
+		</style>
+		<script>
+			var nbre1;
+			var nbre2;
+			var operation;
+			var tab = new Array();
+				tab["*"] = function mult(x, y){return x*y;};
+				tab["/"] = function mult(x, y){return x/y;};
+				tab["-"] = function mult(x, y){return x-y;};
+				tab["+"] = function mult(x, y){return x+y;};
+			function zero()
+				{   var maths = 0;
+					maths = document.getElementById("big_box2"); 
+					maths.value += 0;
+					var mathsTop = 0;
+					mathsTop = document.getElementById("big_box1"); 
+					mathsTop.value += 0;
+				}function one()
+				{   var maths = 0;
+					maths = document.getElementById("big_box2"); 
+					maths.value += 1;
+					var mathsTop = 0;
+					mathsTop = document.getElementById("big_box1"); 
+					mathsTop.value += 1;
+				}function two()
+				{   var maths = 0;
+					maths = document.getElementById("big_box2"); 
+					maths.value += 2;
+					var mathsTop = 0;
+					mathsTop = document.getElementById("big_box1"); 
+					mathsTop.value += 2;
+				}function three()
+				{   var maths = 0;
+					maths = document.getElementById("big_box2"); 
+					maths.value += 3;
+					var mathsTop = 0;
+					mathsTop = document.getElementById("big_box1"); 
+					mathsTop.value += 3;
+				}function four()
+				{   var maths = 0;
+					maths = document.getElementById("big_box2"); 
+					maths.value += 4;
+					var mathsTop = 0;
+					mathsTop = document.getElementById("big_box1"); 
+					mathsTop.value += 4;
+				}function five()
+				{   var maths = 0;
+					maths = document.getElementById("big_box2"); 
+					maths.value += 5;
+					var mathsTop = 0;
+					mathsTop = document.getElementById("big_box1"); 
+					mathsTop.value += 5;
+				}function six()
+				{   var maths = 0;
+					maths = document.getElementById("big_box2"); 
+					maths.value += 6;
+					var mathsTop = 0;
+					mathsTop = document.getElementById("big_box1"); 
+					mathsTop.value += 6;
+				}function seven()
+				{   var maths = 0;
+					maths = document.getElementById("big_box2"); 
+					maths.value += 7;
+					var mathsTop = 0;
+					mathsTop = document.getElementById("big_box1"); 
+					mathsTop.value += 7;
+				}function eight()
+				{   var maths = 0;
+					maths = document.getElementById("big_box2"); 
+					maths.value += 8;
+					var mathsTop = 0;
+					mathsTop = document.getElementById("big_box1"); 
+					mathsTop.value += 8;
+				}function nine()
+				{   var maths = 0;
+					maths = document.getElementById("big_box2"); 
+					maths.value += 9;
+					var mathsTop = 0;
+					mathsTop = document.getElementById("big_box1"); 
+					mathsTop.value += 9;
+				}function point()
+				{   var maths = 0;
+					maths = document.getElementById("big_box2"); 
+					maths.value += ".";
+					var mathsTop = 0;
+					mathsTop = document.getElementById("big_box1"); 
+					mathsTop.value += ".";
+				}function plus()
+				{   var maths = 0;
+					maths = document.getElementById("big_box2"); 
+					nbre1 = maths.value;					
+					operation = "+";
+					maths.value = "";
+					var mathsTop = 0;
+					mathsTop = document.getElementById("big_box1"); 
+					mathsTop.value += "+";
+				}function less()
+				{   var maths = 0;
+					maths = document.getElementById("big_box2"); 
+					nbre1 = maths.value;					
+					operation = "-";
+					maths.value = "";
+					var mathsTop = 0;
+					mathsTop = document.getElementById("big_box1"); 
+					mathsTop.value += "-";
+				}function star()
+				{   var maths = 0;
+					maths = document.getElementById("big_box2");
+					nbre1 = maths.value;					
+					operation = "*";
+					maths.value = "";
+					var mathsTop = 0;
+					mathsTop = document.getElementById("big_box1"); 
+					mathsTop.value += "*";
+				}function slash()
+				{   var maths = 0;
+					maths = document.getElementById("big_box2"); 
+					nbre1 = maths.value;					
+					operation = "/";
+					maths.value = "";
+					var mathsTop = 0;
+					mathsTop = document.getElementById("big_box1"); 
+					mathsTop.value += "/";
+				}function equal()
+				{   var maths = 0;
+					maths = document.getElementById("big_box2"); 
+					nbre2 = maths.value;
+					var mathsTop = 0;
+					mathsTop = document.getElementById("big_box1"); 
+						if(!nbre1 || !nbre2)
+							{
+							maths.value="veuillez saisir une operation valide"
+							mathsTop.value = "";
+							}
+						else
+						{
+							maths.value = tab[operation](parseFloat(nbre1), parseFloat(nbre2));					
+							mathsTop.value += " = ";
+							mathsTop.value += maths.value;
+						}
+				}function c()
+				{   var maths = 0;
+					maths = document.getElementById("big_box2"); 
+					maths.value = "";
+					var mathsTop = 0;
+					mathsTop = document.getElementById("big_box1"); 
+					mathsTop.value = "";
+				}function separated()
+				{	var maths = 0;
+					maths = document.getElementById("big_box1");
+					maths.value += " ";
+				}	
+		</script>
+	</head>
+	<body>	
+		<div class="container"> 
+			<header>
+				Ma Calculatrice toute simple: 
+				<span class="color_header"> Calculatrice simple </span> 
+				<p class="ligne_double">  </p>
+			</header>
+				<div class="big_box">
+					<input type="tel" id="big_box1"/> <br />
+					<input type="tel" id="big_box2"/> 
+				</div> 
+			<div class="ligne1_complete">
+				<a href="#" class="ligne1_colonneA" onclick="seven()"> 7 </a> 
+				<a href="#" class="ligne1_colonneA" onclick="eight()"> 8 </a> 
+				<a href="#" class="ligne1_colonneA" onclick="nine()"> 9 </a> 
+				<a href="#" class="ligne1_colonneB1" onclick="ce()"> CE </a> 
+				<a href="#" class="ligne1_colonneB2" onclick="c()"> C </a>
+				 				
+			</div>
+			<div class="ligne2_complete">
+				<a href="#" class="ligne2_colonneA" onclick="four()"> 4 </a> 
+				<a href="#" class="ligne2_colonneA" onclick="five()"> 5 </a> 
+				<a href="#" class="ligne2_colonneA" onclick="six()"> 6 </a> <a href="#" class="ligne2_colonneB1" onclick="slash()">/</a> <a href="#" class="ligne2_colonneB2" onclick="star()"> * </a> 				
+			</div>
+			<div class="ligne3_4a">
+				<a href="#" class="ligne3_colonneA" onclick="one()"> 1  </a>
+				<a href="#" class="ligne3_colonneA" onclick="two()"> 2 </a> 
+				<a href="#" class="ligne3_colonneA" onclick="three()"> 3 </a> 
+				<a href="#" class="ligne3_colonneB1" onclick="less()">-</a> <a href="#" class="ligne3_colonneB2" onclick="plus()" >+</a>
+				
+				<a href="#" class="ligne4_colonneA1" onclick="zero()"> 0</a> <a href="#" class="ligne4_colonneA2" onclick="point()">.</a> <a href="#" class="ligne4_colonneB1" onclick="equal()">=</a> 
+			</div>
+				
+			<a href="#" id="text" onclick="separated()"> Séparer milliers* </a> <br /> &nbsp &nbsp
+			 *Maintenir le bouton			
+		</div>
+	</body>
+</html>
